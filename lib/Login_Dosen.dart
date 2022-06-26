@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:uas_mobileprogramming/Data_Dosen.dart';
-import 'package:uas_mobileprogramming/Form_Mahasiwa.dart';
-import 'package:uas_mobileprogramming/Login_Dosen.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class LoginDosen extends StatefulWidget {
+  const LoginDosen({Key? key}) : super(key: key);
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  State<LoginDosen> createState() => _LoginDosenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginDosenState extends State<LoginDosen> {
   final usernamecontrol = TextEditingController();
   final passwordcontrol = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
-  static String username = "mahasiswa";
-  static String password = "mahasiswa123";
+  static String username = "dosen";
+  static String password = "dosen123";
   int authentication = 0;
   var _isObscure = true;
   var _isVisible = false;
@@ -50,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Column(
                         children: <Widget>[
                           SizedBox(height: 45),
-                          Text('Login Mahasiwa',
+                          Text('Login Dosen',
                               style: TextStyle(
                                   fontSize: 30,
                                   fontFamily: 'Acme',
@@ -149,7 +147,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const FormMahasiswa()));
+                                            const Data_Dosen()));
                               } else {
                                 ScaffoldMessenger.of(context)
                                     .showSnackBar(failedNotif);
@@ -158,28 +156,6 @@ class _LoginScreenState extends State<LoginScreen> {
                             splashColor: Colors.lightBlueAccent,
                           ),
                           SizedBox(height: 30),
-                          Text('or',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  fontFamily: 'Acme',
-                                  color: Colors.black.withOpacity(0.5)),
-                              textAlign: TextAlign.center),
-                          SizedBox(height: 30),
-                          TextButton(
-                              child: Text('Login as Dosen',
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontFamily: 'Acme',
-                                      color: Colors.black.withOpacity(0.5)),
-                                  textAlign: TextAlign.center),
-                              onPressed: () => {
-                                    print(authentication),
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (_) => LoginDosen())),
-                                  }),
-                          SizedBox(height: 20),
                         ],
                       ),
                     ),
