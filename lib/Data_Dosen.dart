@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:uas_mobileprogramming/Detail_Data_Dosen.dart';
 
 class Data_Dosen extends StatefulWidget {
   const Data_Dosen({Key? key}) : super(key: key);
@@ -7,7 +7,6 @@ class Data_Dosen extends StatefulWidget {
   @override
   _Data_DosenState createState() => _Data_DosenState();
 }
-
 
 class _Data_DosenState extends State<Data_Dosen> {
   @override
@@ -91,7 +90,11 @@ class MyStatelessWidget extends StatelessWidget {
                   DataCell(
                     TextButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/DetailDosen');
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const Detail_Data_Dosen()));
                         },
                         child: const Text('Edit')),
                   ),
@@ -105,9 +108,7 @@ class MyStatelessWidget extends StatelessWidget {
                   DataCell(Text('Bandung')),
                   DataCell(Text('087857867654')),
                   DataCell(
-                    TextButton(
-                        onPressed: null,
-                        child: const Text('Edit')),
+                    TextButton(onPressed: null, child: const Text('Edit')),
                   ),
                 ],
               ),
@@ -119,9 +120,7 @@ class MyStatelessWidget extends StatelessWidget {
                   DataCell(Text('Bandung')),
                   DataCell(Text('087857867654')),
                   DataCell(
-                    TextButton(
-                        onPressed: null,
-                        child: const Text('Edit')),
+                    TextButton(onPressed: null, child: const Text('Edit')),
                   ),
                 ],
               ),
@@ -133,9 +132,7 @@ class MyStatelessWidget extends StatelessWidget {
                   DataCell(Text('Bandung')),
                   DataCell(Text('087857867654')),
                   DataCell(
-                    TextButton(
-                        onPressed: null,
-                        child: const Text('Edit')),
+                    TextButton(onPressed: null, child: const Text('Edit')),
                   ),
                 ],
               ),
@@ -147,9 +144,7 @@ class MyStatelessWidget extends StatelessWidget {
                   DataCell(Text('Bandung')),
                   DataCell(Text('087857867654')),
                   DataCell(
-                    TextButton(
-                        onPressed: null,
-                        child: const Text('Edit')),
+                    TextButton(onPressed: null, child: const Text('Edit')),
                   ),
                 ],
               ),

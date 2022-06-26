@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Detail_Data_Dosen extends StatefulWidget {
   const Detail_Data_Dosen({Key? key}) : super(key: key);
 
@@ -11,9 +10,10 @@ class Detail_Data_Dosen extends StatefulWidget {
 class _Detail_Data_DosenState extends State<Detail_Data_Dosen> {
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
+      appBar: AppBar(
         centerTitle: true,
-        title: const Text('Informasi Dosen',
+        title: const Text(
+          'Informasi Dosen',
           style: TextStyle(fontFamily: 'Montserrat'),
         ),
         flexibleSpace: Container(
