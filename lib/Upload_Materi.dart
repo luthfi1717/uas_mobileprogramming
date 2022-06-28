@@ -16,10 +16,11 @@ class _UploadMateriState extends State<UploadMateri> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          'Informasi Dosen',
+          'Materi',
           style: TextStyle(fontFamily: 'Montserrat'),
         ),
         flexibleSpace: Container(
@@ -35,7 +36,7 @@ class _UploadMateriState extends State<UploadMateri> {
       body: Column(
         children: <Widget>[
           Container(
-            height: 275,
+            height: 200,
             width: 1000,
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -45,11 +46,18 @@ class _UploadMateriState extends State<UploadMateri> {
               ),
             ),
           ),
+          SizedBox(height: 20),
           Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Edit Data in Here!'),
+                Text('Upload Materi in Here!',
+                 style: TextStyle(
+                  fontSize: 14, 
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                ),
+                ),
               ],
             ),
           ),
@@ -59,141 +67,51 @@ class _UploadMateriState extends State<UploadMateri> {
               children: <Widget>[
                 SizedBox(height: 12),
                 Container(
-                  width: 390,
+                  width: 380,
                   child: Card(
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        SizedBox(height: 20),
-                        Row(children: <Widget>[
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.home,
-                            color: Colors.blue,
-                            size: 24.0,
+                        SizedBox(height: 5),
+                        TextField(
+                          controller: _nidController,
+                          decoration: const InputDecoration(
+                            labelText: 'Pertemuan',
+                            icon: Icon(
+                              Icons.handshake,
+                              color: Color(0xff00aec4),
+                            ),
                           ),
-                          SizedBox(width: 20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[],
+                        ),
+                        SizedBox(height: 5),
+                        TextField(
+                          controller: _nidController,
+                          decoration: const InputDecoration(
+                            labelText: 'Judul Materi',
+                            icon: Icon(
+                              Icons.label,
+                              color: Color(0xff00aec4),
+                            ),
                           ),
-                        ]),
-                        SizedBox(height: 25),
-                        Row(children: <Widget>[
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.person,
-                            color: Colors.blue,
-                            size: 24.0,
+                        ),
+                        SizedBox(height: 5),
+                        TextField(
+                          controller: _nidController,
+                          decoration: const InputDecoration(
+                            labelText: 'Deskripsi',
+                            icon: Icon(
+                              Icons.assignment_outlined,
+                              color: Color(0xff00aec4),
+                            ),
                           ),
-                          SizedBox(width: 20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text('Gender',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.blue.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                              SizedBox(height: 8),
-                              Text('Female',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontFamily: 'Acme',
-                                      color: Colors.black.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                            ],
-                          ),
-                        ]),
-                        SizedBox(height: 25),
-                        Row(children: <Widget>[
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.calendar_today,
-                            color: Colors.blue,
-                            size: 24.0,
-                          ),
-                          SizedBox(width: 20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text('Date of birth',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.blue.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                              SizedBox(height: 8),
-                              Text('2001-12-19',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontFamily: 'Acme',
-                                      color: Colors.black.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                            ],
-                          ),
-                        ]),
-                        SizedBox(height: 25),
-                        Row(children: <Widget>[
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.phone_android,
-                            color: Colors.blue,
-                            size: 24.0,
-                          ),
-                          SizedBox(width: 20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text('Mobile',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.blue.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                              SizedBox(height: 8),
-                              Text('+62 838-2214-6084',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontFamily: 'Acme',
-                                      color: Colors.black.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                            ],
-                          ),
-                        ]),
-                        SizedBox(height: 25),
-                        Row(children: <Widget>[
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.email,
-                            color: Colors.blue,
-                            size: 24.0,
-                          ),
-                          SizedBox(width: 20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text('Email',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.blue.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                              SizedBox(height: 8),
-                              Text('elfaranadivaa191201@gmail.com',
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Acme',
-                                      color: Colors.black.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                            ],
-                          ),
-                        ]),
-                        SizedBox(height: 20),
+                        ),
+                        SizedBox(height: 15),
                       ],
                     ),
                   ),
                 ),
+                ElevatedButton(
+                  onPressed: (null), child: Text('Upload')),
               ],
             ),
           ),

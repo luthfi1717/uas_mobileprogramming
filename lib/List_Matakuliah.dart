@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uas_mobileprogramming/Upload_Materi.dart';
+import 'package:uas_mobileprogramming/Data_Dosen.dart';
+import 'package:uas_mobileprogramming/Login_Screen.dart';
 
 class ListMatkul extends StatefulWidget {
   const ListMatkul({Key? key}) : super(key: key);
@@ -30,6 +32,72 @@ class _ListMatkulState extends State<ListMatkul> {
         ),
       ),
         body: const MyStatelessWidget(),
+         drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              child: Text('Mobile Programming', style: TextStyle(fontWeight: FontWeight.bold),
+                textAlign: TextAlign.right,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage('assets/Background.jpg')
+                ),
+              ),
+
+            ),
+            ListTile(
+              leading: Icon(Icons.account_circle_outlined ),
+              title: const Text('Data Dosen'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => Data_Dosen()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.apps),
+              title: const Text('Matakuliah'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => ListMatkul()));
+              },
+            ),
+            SizedBox(
+              height: 450,
+            ),
+            Container(
+              alignment: Alignment.centerLeft,
+              width: 500,
+              height: 80,
+              padding: EdgeInsets.only(left: 15),
+              child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                padding:EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                child: Text("Logout",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900
+                  ),
+                ),
+                textColor: Colors.white,
+                color: Colors.blueGrey[900],
+                onPressed: (){
+                  Navigator.push(
+                    context,MaterialPageRoute(builder: (_) => LoginScreen()),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
       ),
     );
   }

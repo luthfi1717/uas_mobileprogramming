@@ -18,12 +18,23 @@ class _HomePage extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Dashboard'),
+        title: const Text(
+          'Dashboard',
+          style: TextStyle(fontFamily: 'Montserrat'),
+        ),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xffffffff), Color(0xff00aec4)],
+              begin: Alignment.center,
+              end: Alignment.center,
+            ),
+          ),
+        ),
       ),
-      backgroundColor: Colors.blueGrey[800],
       body: const Center(
-        child: Text('Selamat Datang di Aplikasi Mobile Programming', style: TextStyle(color: Colors.white)),
-      ),
+        child: Text('Selamat Datang di Aplikasi Mobile Programming', style: TextStyle(color: Colors.black)),
+       ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -60,7 +71,7 @@ class _HomePage extends State<HomePage> {
               },
             ),
             SizedBox(
-              height: 210,
+              height: 450,
             ),
             Container(
               alignment: Alignment.centerLeft,

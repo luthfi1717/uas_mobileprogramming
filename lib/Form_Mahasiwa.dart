@@ -12,8 +12,20 @@ class _FormMahasiswaState extends State<FormMahasiswa> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Form Mahasiswa'),
-        
+        centerTitle: true,
+        title: const Text(
+          'Matakuliah',
+          style: TextStyle(fontFamily: 'Montserrat'),
+        ),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xffffffff), Color(0xff00aec4)],
+              begin: Alignment.center,
+              end: Alignment.center,
+            ),
+          ),
+        ),
       ),
       body: ListView(
         children: [

@@ -16,6 +16,7 @@ class _Detail_Data_DosenState extends State<Detail_Data_Dosen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
@@ -35,7 +36,7 @@ class _Detail_Data_DosenState extends State<Detail_Data_Dosen> {
       body: Column(
         children: <Widget>[
           Container(
-            height: 275,
+            height: 200,
             width: 1000,
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -45,11 +46,18 @@ class _Detail_Data_DosenState extends State<Detail_Data_Dosen> {
               ),
             ),
           ),
+          SizedBox(height: 20),
           Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Edit Data in Here!'),
+                Text('Edit Data in Here!',
+                 style: TextStyle(
+                  fontSize: 14, 
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                ),
+                ),
               ],
             ),
           ),
@@ -63,137 +71,79 @@ class _Detail_Data_DosenState extends State<Detail_Data_Dosen> {
                   child: Card(
                     child: Column(
                       children: <Widget>[
-                        SizedBox(height: 20),
-                        Row(children: <Widget>[
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.home,
-                            color: Colors.blue,
-                            size: 24.0,
+                        SizedBox(height: 5),
+                        TextField(
+                          controller: _nidController,
+                          decoration: const InputDecoration(
+                            labelText: 'NID',
+                            icon: Icon(
+                              Icons.assignment_outlined,
+                              color: Color(0xff00aec4),
+                            ),
                           ),
-                          SizedBox(width: 20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[],
+                        ),
+                        SizedBox(height: 5),
+                        TextField(
+                          controller: _nidController,
+                          decoration: const InputDecoration(
+                            labelText: 'Nama',
+                            icon: Icon(
+                              Icons.account_circle_outlined,
+                              color: Color(0xff00aec4),
+                            ),
                           ),
-                        ]),
-                        SizedBox(height: 25),
-                        Row(children: <Widget>[
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.person,
-                            color: Colors.blue,
-                            size: 24.0,
+                        ),
+                        SizedBox(height: 5),
+                        TextField(
+                          controller: _nidController,
+                          decoration: const InputDecoration(
+                            labelText: 'Alamat',
+                            icon: Icon(
+                              Icons.approval_outlined,
+                              color: Color(0xff00aec4),
+                            ),
                           ),
-                          SizedBox(width: 20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text('Gender',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.blue.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                              SizedBox(height: 8),
-                              Text('Female',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontFamily: 'Acme',
-                                      color: Colors.black.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                            ],
+                        ),
+                        SizedBox(height: 5),
+                        TextField(
+                          controller: _nidController,
+                          decoration: const InputDecoration(
+                            labelText: 'Kota',
+                            icon: Icon(
+                              Icons.location_city_outlined,
+                              color: Color(0xff00aec4),
+                            ),
                           ),
-                        ]),
-                        SizedBox(height: 25),
-                        Row(children: <Widget>[
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.calendar_today,
-                            color: Colors.blue,
-                            size: 24.0,
+                        ),
+                        SizedBox(height: 5),
+                        TextField(
+                          controller: _nidController,
+                          decoration: const InputDecoration(
+                            labelText: 'No Telepon',
+                            icon: Icon(
+                              Icons.call,
+                              color: Color(0xff00aec4),
+                            ),
                           ),
-                          SizedBox(width: 20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text('Date of birth',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.blue.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                              SizedBox(height: 8),
-                              Text('2001-12-19',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontFamily: 'Acme',
-                                      color: Colors.black.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                            ],
+                        ),
+                        SizedBox(height: 5),
+                        TextField(
+                          controller: _nidController,
+                          decoration: const InputDecoration(
+                            labelText: 'Email',
+                            icon: Icon(
+                              Icons.email_outlined,
+                              color: Color(0xff00aec4),
+                            ),
                           ),
-                        ]),
-                        SizedBox(height: 25),
-                        Row(children: <Widget>[
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.phone_android,
-                            color: Colors.blue,
-                            size: 24.0,
-                          ),
-                          SizedBox(width: 20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text('Mobile',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.blue.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                              SizedBox(height: 8),
-                              Text('+62 838-2214-6084',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontFamily: 'Acme',
-                                      color: Colors.black.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                            ],
-                          ),
-                        ]),
-                        SizedBox(height: 25),
-                        Row(children: <Widget>[
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.email,
-                            color: Colors.blue,
-                            size: 24.0,
-                          ),
-                          SizedBox(width: 20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text('Email',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.blue.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                              SizedBox(height: 8),
-                              Text('elfaranadivaa191201@gmail.com',
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Acme',
-                                      color: Colors.black.withOpacity(1.0)),
-                                  textAlign: TextAlign.center),
-                            ],
-                          ),
-                        ]),
-                        SizedBox(height: 20),
+                        ),
+                        SizedBox(height: 15),
                       ],
                     ),
                   ),
                 ),
+                ElevatedButton(
+                  onPressed: (null), child: Text('Simpan')),
               ],
             ),
           ),
