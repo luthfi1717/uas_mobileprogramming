@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uas_mobileprogramming/Data_Dosen.dart';
+import 'package:uas_mobileprogramming/Home_Screen.dart';
 
 class LoginDosen extends StatefulWidget {
   const LoginDosen({Key? key}) : super(key: key);
@@ -22,6 +22,7 @@ class _LoginDosenState extends State<LoginDosen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Form(
         key: _formKey,
         child: Container(
@@ -40,7 +41,7 @@ class _LoginDosenState extends State<LoginDosen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  SizedBox(height: 50),
+                  SizedBox(height: 150),
                   Container(
                     width: 350,
                     height: 550,
@@ -147,7 +148,7 @@ class _LoginDosenState extends State<LoginDosen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const Data_Dosen()));
+                                             HomePage()));
                               } else {
                                 ScaffoldMessenger.of(context)
                                     .showSnackBar(failedNotif);
@@ -155,7 +156,7 @@ class _LoginDosenState extends State<LoginDosen> {
                             },
                             splashColor: Colors.lightBlueAccent,
                           ),
-                          SizedBox(height: 30),
+                          SizedBox(height: 76),
                         ],
                       ),
                     ),

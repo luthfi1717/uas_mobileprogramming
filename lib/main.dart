@@ -1,4 +1,5 @@
 import 'package:uas_mobileprogramming/Data_Dosen.dart';
+import 'package:uas_mobileprogramming/Home_Screen.dart';
 import 'package:uas_mobileprogramming/Login_Screen.Dart';
 import 'package:uas_mobileprogramming/Detail_Data_Dosen.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/login",
       routes: {
         "/login": (context) => const LoginScreen(),
-        "/": (context) => const Data_Dosen(),
+        "/": (context) =>  HomePage(),
         "/DetailDosen": (context) => const Detail_Data_Dosen(),
         // "/collection": (context) => const CollectionScreen(),
         // "/diary": (context) => const DiaryScreen(),

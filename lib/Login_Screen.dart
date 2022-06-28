@@ -24,6 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Form(
         key: _formKey,
         child: Container(
@@ -42,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  SizedBox(height: 50),
+                  SizedBox(height: 150),
                   Container(
                     width: 350,
                     height: 550,
@@ -179,7 +180,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                         MaterialPageRoute(
                                             builder: (_) => LoginDosen())),
                                   }),
-                          SizedBox(height: 20),
+                          SizedBox(height: 76),
                         ],
                       ),
                     ),

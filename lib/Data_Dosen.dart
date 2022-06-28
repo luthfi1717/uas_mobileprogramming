@@ -14,8 +14,21 @@ class _Data_DosenState extends State<Data_Dosen> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('Dosen STMIK "AMIKBANDUNG"')),
+        centerTitle: true,
+        title: const Text(
+          'Data Dosen',
+          style: TextStyle(fontFamily: 'Montserrat'),
         ),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xffffffff), Color(0xff00aec4)],
+              begin: Alignment.center,
+              end: Alignment.center,
+            ),
+          ),
+        ),
+      ),
         body: const MyStatelessWidget(),
       ),
     );
@@ -28,128 +41,165 @@ class MyStatelessWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      scrollDirection: Axis.horizontal,
       children: [
-        Container(
-          margin: EdgeInsets.all(30.0),
-          child: Center(
-            child: Text(
-              'Data Dosen STMIK "AMIKBANDUNG"',
-              style: TextStyle(fontSize: 20, color: Colors.black),
+        Column(
+          children: [
+            SizedBox(height: 30),
+            Text(
+                'Data Dosen STMIK"AMIKBANDUNG"',
+                style: TextStyle(
+                  fontSize: 18, 
+                  fontWeight: FontWeight.bold,
+                ),
             ),
-          ),
-        ),
-        Container(
-          alignment: Alignment.center,
-          child: DataTable(
-            columns: const <DataColumn>[
-              DataColumn(
-                label: Text(
-                  'No',
-                  style: TextStyle(fontStyle: FontStyle.italic),
-                ),
-              ),
-              DataColumn(
-                label: Text(
-                  'NID',
-                  style: TextStyle(fontStyle: FontStyle.italic),
-                ),
-              ),
-              DataColumn(
-                label: Text(
-                  'Nama Dosen',
-                  style: TextStyle(fontStyle: FontStyle.italic),
-                ),
-              ),
-              DataColumn(
-                label: Text(
-                  'Alamat',
-                  style: TextStyle(fontStyle: FontStyle.italic),
-                ),
-              ),
-              DataColumn(
-                label: Text(
-                  'No Telepon',
-                  style: TextStyle(fontStyle: FontStyle.italic),
-                ),
-              ),
-              DataColumn(
-                label: Text(
-                  'Detail',
-                  style: TextStyle(fontStyle: FontStyle.italic),
-                ),
-              ),
-            ],
-            rows: <DataRow>[
-              DataRow(
-                cells: <DataCell>[
-                  DataCell(Text('1')),
-                  DataCell(Text('20021')),
-                  DataCell(Text('Indriani, S.T., M.ENG')),
-                  DataCell(Text('Bandung')),
-                  DataCell(Text('087857867654')),
-                  DataCell(
-                    TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const Detail_Data_Dosen()));
-                        },
-                        child: const Text('Edit')),
+            SizedBox(height: 30),
+            Container(
+              alignment: Alignment.center,
+              child: DataTable(
+                columns: const <DataColumn>[
+                  DataColumn(
+                    label: Text(
+                      'NID',
+                      style: TextStyle(fontStyle: FontStyle.italic),
+                    ),
+                  ),
+                  DataColumn(
+                    label: Text(
+                      'Nama Dosen',
+                      style: TextStyle(fontStyle: FontStyle.italic),
+                    ),
+                  ),
+                  DataColumn(
+                    label: Text(
+                      'Alamat',
+                      style: TextStyle(fontStyle: FontStyle.italic),
+                    ),
+                  ),
+                  DataColumn(
+                    label: Text(
+                      'No Telepon',
+                      style: TextStyle(fontStyle: FontStyle.italic),
+                    ),
+                  ),
+                  DataColumn(
+                    label: Text(
+                      'Email',
+                      style: TextStyle(fontStyle: FontStyle.italic),
+                    ),
+                  ),
+                  DataColumn(
+                    label: Text(
+                      'Detail',
+                      style: TextStyle(fontStyle: FontStyle.italic),
+                    ),
+                  ),
+                ],
+                rows: <DataRow>[
+                  DataRow(
+                    cells: <DataCell>[
+                      DataCell(Text('20021')),
+                      DataCell(Text('Indriani, S.T., M.ENG')),
+                      DataCell(Text('Bandung')),
+                      DataCell(Text('087857867654')),
+                      DataCell(Text('Indriani11@gmail.com')),
+                      DataCell(
+                        TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const Detail_Data_Dosen()));
+                            },
+                            child: const Text('Edit')),
+                      ),
+                    ],
+                  ),
+                  DataRow(
+                    cells: <DataCell>[
+                      DataCell(Text('20021')),
+                      DataCell(Text('Indriani, S.T., M.ENG')),
+                      DataCell(Text('Bandung')),
+                      DataCell(Text('087857867654')),
+                      DataCell(Text('Indriani11@gmail.com')),
+                      DataCell(
+                        TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const Detail_Data_Dosen()));
+                            },
+                            child: const Text('Edit')),
+                      ),
+                    ],
+                  ),
+                  DataRow(
+                    cells: <DataCell>[
+                      DataCell(Text('20021')),
+                      DataCell(Text('Indriani, S.T., M.ENG')),
+                      DataCell(Text('Bandung')),
+                      DataCell(Text('087857867654')),
+                      DataCell(Text('Indriani11@gmail.com')),
+                      DataCell(
+                        TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const Detail_Data_Dosen()));
+                            },
+                            child: const Text('Edit')),
+                      ),
+                    ],
+                  ),
+                  DataRow(
+                    cells: <DataCell>[
+                      DataCell(Text('20021')),
+                      DataCell(Text('Indriani, S.T., M.ENG')),
+                      DataCell(Text('Bandung')),
+                      DataCell(Text('087857867654')),
+                      DataCell(Text('Indriani11@gmail.com')),
+                      DataCell(
+                        TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const Detail_Data_Dosen()));
+                            },
+                            child: const Text('Edit')),
+                      ),
+                    ],
+                  ),
+                  DataRow(
+                    cells: <DataCell>[
+                      DataCell(Text('20021')),
+                      DataCell(Text('Indriani, S.T., M.ENG')),
+                      DataCell(Text('Bandung')),
+                      DataCell(Text('087857867654')),
+                      DataCell(Text('Indriani11@gmail.com')),
+                      DataCell(
+                        TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const Detail_Data_Dosen()));
+                            },
+                            child: const Text('Edit')),
+                      ),
+                    ],
                   ),
                 ],
               ),
-              DataRow(
-                cells: <DataCell>[
-                  DataCell(Text('2')),
-                  DataCell(Text('20021')),
-                  DataCell(Text('Indriani, S.T., M.ENG')),
-                  DataCell(Text('Bandung')),
-                  DataCell(Text('087857867654')),
-                  DataCell(
-                    TextButton(onPressed: null, child: const Text('Edit')),
-                  ),
-                ],
-              ),
-              DataRow(
-                cells: <DataCell>[
-                  DataCell(Text('3')),
-                  DataCell(Text('20021')),
-                  DataCell(Text('Indriani, S.T., M.ENG')),
-                  DataCell(Text('Bandung')),
-                  DataCell(Text('087857867654')),
-                  DataCell(
-                    TextButton(onPressed: null, child: const Text('Edit')),
-                  ),
-                ],
-              ),
-              DataRow(
-                cells: <DataCell>[
-                  DataCell(Text('4')),
-                  DataCell(Text('20021')),
-                  DataCell(Text('Indriani, S.T., M.ENG')),
-                  DataCell(Text('Bandung')),
-                  DataCell(Text('087857867654')),
-                  DataCell(
-                    TextButton(onPressed: null, child: const Text('Edit')),
-                  ),
-                ],
-              ),
-              DataRow(
-                cells: <DataCell>[
-                  DataCell(Text('5')),
-                  DataCell(Text('20021')),
-                  DataCell(Text('Indriani, S.T., M.ENG')),
-                  DataCell(Text('Bandung')),
-                  DataCell(Text('087857867654')),
-                  DataCell(
-                    TextButton(onPressed: null, child: const Text('Edit')),
-                  ),
-                ],
-              ),
-            ],
-          ),
+            ),
+          ],
         )
       ],
     );
